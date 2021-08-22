@@ -13,7 +13,34 @@ namespace TechJobsOO
         public CoreCompetency JobCoreCompetency { get; set; }
 
         // TODO: Add the two necessary constructors.
+        public Job(int jobId, string jobName)
+        {
+            Id = jobId;
+            Name = jobName;
+        }
+
+        public Job(string jobName)
+        {
+            Id = nextId;
+            nextId++;
+            Name = jobName;
+        }
 
         // TODO: Generate Equals() and GetHashCode() methods.
+        public override bool Equals(object obj)
+        {
+            return obj is Job job &&
+                   Id == job.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Name);
+        }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
