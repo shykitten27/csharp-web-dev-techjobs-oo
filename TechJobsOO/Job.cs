@@ -12,7 +12,7 @@ namespace TechJobsOO
         public PositionType JobType { get; set; }
         public CoreCompetency JobCoreCompetency { get; set; }
 
-        // TODO: Add the two necessary constructors.
+        // TODO: Add the two necessary constructors. Complete
         public Job(int jobId, string jobName)
         {
             Id = jobId;
@@ -26,7 +26,7 @@ namespace TechJobsOO
             Name = jobName;
         }
 
-        // TODO: Generate Equals() and GetHashCode() methods.
+        // TODO: Generate Equals() and GetHashCode() methods. Complete
         public override bool Equals(object obj)
         {
             return obj is Job job &&
