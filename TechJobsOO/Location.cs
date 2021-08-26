@@ -19,7 +19,7 @@ namespace TechJobsOO
         public Location(string value, string zipCode) : this()
         {
             Id = Location.nextId++;
-            Value = value; //the location value aka city
+            Value = value; //aka city
             ZipCode = zipCode;
         }
 

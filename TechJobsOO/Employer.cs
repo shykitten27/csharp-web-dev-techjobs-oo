@@ -12,15 +12,17 @@ namespace TechJobsOO
         public string PrimaryContact { get; set;}
         public List<Job> AvailableJobs { get; set;}
 
+        //empty constructory
         public Employer()
         {
             Id = nextId;
             nextId++;
         }
 
+        //overloaded second constructor to this class 
         public Employer(string value) : this()
         {
-            Value = value; //the employer value aka employer name
+            Value = value; //aka employer name
         }
 
         public override bool Equals(object obj)

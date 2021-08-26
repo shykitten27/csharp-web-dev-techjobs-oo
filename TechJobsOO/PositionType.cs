@@ -7,15 +7,17 @@ namespace TechJobsOO
         private static int nextId = 1;
         public string Value { get; set; }
 
+        //empty constructory
         public PositionType()
         {
             Id = nextId;
             nextId++;
         }
 
+        //overloaded second constructor
         public PositionType(string value) : this()
         {
-            Value = value; //the positiontype value aka job name
+            Value = value; //job name
         }
         // TODO: Add custom Equals(), GetHashCode(), and ToString() methods. Complete
         public override bool Equals(object obj)

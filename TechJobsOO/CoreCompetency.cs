@@ -9,15 +9,16 @@ namespace TechJobsOO
 
         // TODO: Change the fields to auto-implemented properties. Complete
 
+        //empty constructory
         public CoreCompetency()
         {
             id = nextId;
             nextId++;
         }
-
+        //overloaded second constructor
         public CoreCompetency(string v) : this()
         {
-            value = v; //the corecompetency value aka skill
+            value = v; //aka skill
         }
 
         public override bool Equals(object obj)
