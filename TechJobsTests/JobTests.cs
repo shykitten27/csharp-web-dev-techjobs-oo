@@ -6,7 +6,8 @@ using TechJobsOO;
 
 namespace TechJobsTests
 {
-    class JobTests
+
+    public class JobTests
     {
         Job test_job1; 
         Job test_job2; 
@@ -15,7 +16,7 @@ namespace TechJobsTests
 
         [TestInitialize]
         //create the object
-        public void CreateJobObject() 
+        public void CreateJobObject()
         {
             //emtpy constructors will create two jobs with different Ids
             test_job1 = new Job();
@@ -35,7 +36,7 @@ namespace TechJobsTests
         [TestMethod]
         //assertions for each property
         public void TestJobConstructorSetsAllFields()
-        {           
+        {
             Assert.AreEqual(test_job3.Name, "Product tester");
             Assert.AreEqual(test_job3.EmployerName.Value, "ACME");
             Assert.AreEqual(test_job3.EmployerLocation.Value, "Desert");
@@ -49,11 +50,11 @@ namespace TechJobsTests
             Assert.IsFalse(test_job3.Equals(test_job4));
         }
 
-        [TestMethod]
+/*        [TestMethod]
         public void TestJobToString()
         {
             test_job1.ToString();
             Assert.AreEqual(test_job1.ToString(), "Data not available");
-        }
+        }*/
     }
 }

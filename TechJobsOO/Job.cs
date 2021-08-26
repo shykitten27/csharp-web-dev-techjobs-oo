@@ -45,12 +45,12 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
         }
-
+/*
         public override string ToString()
         {
-
+            
             return "\nID: " + Id + "\nName: " + Name + "\nEmployer: " + EmployerName + "\nLocation: " + EmployerLocation + 
                 "\nPosition Type: " + JobType + "\nCore Competency: " + JobCoreCompetency + "\n";
-        }
+        }*/
     }
 }
