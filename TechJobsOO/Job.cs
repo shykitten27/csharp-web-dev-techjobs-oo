@@ -22,10 +22,8 @@ namespace TechJobsOO
 
         //overloaded second constructor to this class that uses Job() constructor and sets the value of the
         // name, employerName, employerLocation, jobType and jobCoreCompetency fields
-        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompentcy)
-        {
-            Id = Job.nextId++; //combine into one statement
-            //nextId++;
+        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompentcy) : this() 
+        { 
             Name = name;
             EmployerName = employerName;
             EmployerLocation = employerLocation;
@@ -40,11 +38,11 @@ namespace TechJobsOO
             return obj is Job job &&
                    Id == job.Id;
         }
-
+/*
         public override int GetHashCode()
         {
             return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
-        }
+        }*/
 /*
         public override string ToString()
         {

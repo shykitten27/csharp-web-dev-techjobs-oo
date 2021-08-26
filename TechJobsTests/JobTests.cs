@@ -6,7 +6,7 @@ using TechJobsOO;
 
 namespace TechJobsTests
 {
-
+    [TestClass]
     public class JobTests
     {
         Job test_job1; 
