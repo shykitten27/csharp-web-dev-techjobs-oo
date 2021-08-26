@@ -12,21 +12,27 @@ namespace TechJobsOO
         public PositionType JobType { get; set; }
         public CoreCompetency JobCoreCompetency { get; set; }
 
-        // TODO: Add the two necessary constructors. Complete
-        public Job(int jobId, string jobName)
-        {
-            Id = jobId;
-            Name = jobName;
-        }
-
-        public Job(string jobName)
+        // TODO: Add the two necessary constructors. 
+        public Job()
         {
             Id = nextId;
             nextId++;
-            Name = jobName;
         }
 
-        // TODO: Generate Equals() and GetHashCode() methods. Complete
+        //overloaded
+        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompentcy)
+        {
+            Id = Job.nextId++;
+            //nextId++;
+            Name = name;
+            EmployerName = employerName;
+            EmployerLocation = employerLocation;
+            PositionType = jobType;
+            CoreCompetency = jobCoreCompentcy;
+        }
+
+        
+        // TODO: Generate Equals() and GetHashCode() methods. 
         public override bool Equals(object obj)
         {
             return obj is Job job &&

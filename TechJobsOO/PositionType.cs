@@ -15,7 +15,7 @@ namespace TechJobsOO
 
         public PositionType(string value) : this()
         {
-            Value = value;
+            Value = value; //the positiontype value aka job name
         }
         // TODO: Add custom Equals(), GetHashCode(), and ToString() methods. Complete
         public override bool Equals(object obj)
