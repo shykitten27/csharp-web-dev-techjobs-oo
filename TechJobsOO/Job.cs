@@ -24,7 +24,7 @@ namespace TechJobsOO
         // name, employerName, employerLocation, jobType and jobCoreCompetency fields
         public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompentcy)
         {
-            Id = Job.nextId++;
+            Id = Job.nextId++; //combine into one statement
             //nextId++;
             Name = name;
             EmployerName = employerName;

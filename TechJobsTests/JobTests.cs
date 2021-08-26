@@ -16,7 +16,7 @@ namespace TechJobsTests
         //create the object
         public void CreateJobObject() 
         {
-            test_job1 = new Job()
+            test_job1 = new Job();
             test_job2 = new Job();
             test_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         }
@@ -24,7 +24,8 @@ namespace TechJobsTests
         [TestMethod]
         public void TestSettingJobId()
         {
-
+            Assert.IsFalse(test_job1.Id == test_job2.Id); //Ids are NOT equal
+            Assert.IsTrue(test_job2.Id == (test_job1.Id + 1)); //second id is greater by 1
         }
 
         [TestMethod]

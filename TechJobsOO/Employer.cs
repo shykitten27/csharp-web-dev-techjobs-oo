@@ -8,9 +8,9 @@ namespace TechJobsOO
         public int Id { get; }
         private static int nextId = 1;
         public string Value { get; set; } //the employer value aka name
-        public string Address { get; set; }
-        public string PrimaryContact { get; set;}
-        public List<Job> AvailableJobs { get; set;}
+        //public string Address { get; set; }
+        //public string PrimaryContact { get; set;}
+        //public List<Job> AvailableJobs { get; set;}
 
         //empty constructory
         public Employer()
@@ -33,7 +33,7 @@ namespace TechJobsOO
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Value, Address, PrimaryContact, AvailableJobs);
+            return HashCode.Combine(Id, Value);
         }
 
         public override string ToString()
