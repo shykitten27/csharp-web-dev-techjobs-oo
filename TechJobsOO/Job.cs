@@ -27,8 +27,8 @@ namespace TechJobsOO
             Name = name;
             EmployerName = employerName;
             EmployerLocation = employerLocation;
-            PositionType = jobType;
-            CoreCompetency = jobCoreCompentcy;
+            JobType = jobType;
+            JobCoreCompetency = jobCoreCompentcy;
         }
 
         

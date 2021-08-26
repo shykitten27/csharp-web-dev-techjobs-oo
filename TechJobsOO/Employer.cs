@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace TechJobsOO
 {
     public class Employer
@@ -8,7 +10,7 @@ namespace TechJobsOO
         public string Value { get; set; } //the employer value aka name
         public string Address { get; set; }
         public string PrimaryContact { get; set;}
-        public List<Jobs> AvailableJobs { get; set;}
+        public List<Job> AvailableJobs { get; set;}
 
         public Employer()
         {
@@ -19,9 +21,6 @@ namespace TechJobsOO
         public Employer(string value) : this()
         {
             Value = value; //the employer value aka employer name
-            Address = Address;
-            PrimaryContact = primaryContact;
-            AvailableJobs = AvailableJobs;
         }
 
         public override bool Equals(object obj)

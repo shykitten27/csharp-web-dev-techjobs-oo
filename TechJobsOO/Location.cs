@@ -17,11 +17,7 @@ namespace TechJobsOO
         public Location(string value) : this()
         {
             Value = value; //the location value aka city
-        }
-
-        public ZipCode(string zipcode) : this()
-        {
-            ZipCode = zipcode; 
+            ZipCode = ZipCode;
         }
 
         // TODO: Add a second constructor to this class that uses the Location() constructor and sets the value of the value field.
