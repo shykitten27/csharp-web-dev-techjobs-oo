@@ -8,19 +8,20 @@ namespace TechJobsOO
         public string Value { get; set; }
         public string ZipCode { get; set; } //string in case we implement for Canada or other countries that are alphanumeric zipcodes
 
+        //empty constructory
         public Location()
         {
             Id = nextId;
             nextId++;
         }
 
-        public Location(string value) : this()
+        // TODO: Add a second constructor to this class that uses the Location() constructor and sets the value of the value field as well as new zipCode field.
+        public Location(string value, string zipCode) : this()
         {
+            Id = Location.nextId++;
             Value = value; //the location value aka city
-            ZipCode = ZipCode;
+            ZipCode = zipCode;
         }
-
-        // TODO: Add a second constructor to this class that uses the Location() constructor and sets the value of the value field.
 
         public override bool Equals(object obj)
         {
@@ -30,7 +31,7 @@ namespace TechJobsOO
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id);
+            return HashCode.Combine(Id, Value, ZipCode);
         }
 
         public override string ToString()

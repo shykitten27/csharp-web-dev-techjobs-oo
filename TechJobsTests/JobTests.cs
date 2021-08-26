@@ -8,24 +8,37 @@ namespace TechJobsTests
 {
     class JobTests
     {
-        Job test_job; //variable is declared
+        Job test_job1; 
+        Job test_job2; 
+        Job test_job3; 
 
         [TestInitialize]
         //create the object
         public void CreateJobObject() 
         {
-            test_job = new Job("Developer", new Employer("EHI"), new Location("Clayton"), new PositionType("C# Developer"), new CoreCompetency("C#"));
+            test_job1 = new Job()
+            test_job2 = new Job();
+            test_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         }
+
+        [TestMethod]
+        public void TestSettingJobId()
+        {
+
+        }
+
         [TestMethod]
         //assertions for each property
-        public void TestJobName()
+        public void TestJobConstructorSetsAllFields()
         {           
-            Assert.AreEqual(test_job.Name, "Developer");
-            Assert.AreEqual(test_job.EmployerName.Value, "EHI");
-            Assert.AreEqual(test_job.EmployerLocation.Value, "Clayton");
-            Assert.AreEqual(test_job.JobType.Value, "C# Developer");
-            Assert.AreEqual(test_job.JobCoreCompetency, "C#");
+            Assert.AreEqual(test_job3.Name, "Product tester");
+            Assert.AreEqual(test_job3.EmployerName.Value, "ACME");
+            Assert.AreEqual(test_job3.EmployerLocation.Value, "Desert");
+            Assert.AreEqual(test_job3.JobType.Value, "Quality control");
+            Assert.AreEqual(test_job3.JobCoreCompetency, "Persistence");
         }
+
+
 
 
 
