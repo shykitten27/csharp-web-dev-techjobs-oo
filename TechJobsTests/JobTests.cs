@@ -13,6 +13,8 @@ namespace TechJobsTests
         Job test_job2; 
         Job test_job3;
         Job test_job4;
+        Job test_job5;
+        Job test_job6;
 
         [TestInitialize]
         //create the object
@@ -24,6 +26,8 @@ namespace TechJobsTests
             //full constructors will create two jobs with different Ids even if all other fields are identical
             test_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             test_job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            test_job5 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+            test_job6 = new Job(null, new Employer(null), new Location(null), new PositionType(null), new CoreCompetency(null));
         }
 
         [TestMethod]
@@ -53,13 +57,21 @@ namespace TechJobsTests
         [TestMethod]
         public void TestJobToString()
         {
-            test_job1.ToString();
-            Assert.IsTrue(test_job1.ToString().StartsWith("\n"), "\n");
-            Assert.IsTrue(test_job1.ToString().Contains("\nID: "));
-            //Assert.IsTrue(test_job1.ToString().Contains("Data not available"));
-            //Assert.IsTrue(test_job1.ToString().Contains("\nName: "));
-            //Assert.IsTrue(test_job1.ToString().Contains("Data not available"));
-            Assert.IsTrue(test_job1.ToString().EndsWith("\n"), "\n");
+            //test with an object that uses the FULL constructor and use empty string or nulls to test
+            test_job3.ToString();
+            Assert.IsTrue(test_job3.ToString().StartsWith("\n"));
+            Assert.IsTrue(test_job3.ToString().Contains("\nID: 3\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence"));
+            Assert.IsTrue(test_job3.ToString().EndsWith("\n"), "\n");
+
+            test_job5.ToString();
+            Assert.IsTrue(test_job5.ToString().StartsWith("\n"));
+            Assert.IsTrue(test_job5.ToString().Contains("\nID: 5\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available"));
+            Assert.IsTrue(test_job5.ToString().EndsWith("\n"), "\n");
+
+            test_job6.ToString();
+            Assert.IsTrue(test_job6.ToString().StartsWith("\n"));
+            Assert.IsTrue(test_job6.ToString().Contains("\nID: 6\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available"));
+            Assert.IsTrue(test_job6.ToString().EndsWith("\n"), "\n");
         }
     }
 }

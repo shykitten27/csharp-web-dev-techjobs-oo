@@ -52,7 +52,8 @@ namespace TechJobsOO
             result += "\nID: ";
             result += Id;
 
-/*            if (Name != "")
+            result += "\nName: ";
+            if (Name !=null && Name !="")
             {
                 result += Name;
             }
@@ -62,17 +63,17 @@ namespace TechJobsOO
             }
 
             result += "\nEmployer: ";
-            if (EmployerName.Value != "")
+           if (EmployerName.Value !=null && EmployerName.Value !="")
             {
                 result += EmployerName.Value;
             }
             else
             {
                 result += "Data not available";
-            }*/
+            }
 
-/*            result += "\nLocation: ";
-            if (EmployerLocation.Value != "")
+            result += "\nLocation: ";
+           if (EmployerLocation.Value !=null && EmployerLocation.Value !="")
             {
                 result += EmployerLocation.Value;
             }
@@ -82,7 +83,7 @@ namespace TechJobsOO
             }
 
             result += "\nPosition Type: ";
-            if (JobType.Value != "")
+           if (JobType.Value !=null && JobType.Value !="")
             {
                 result += JobType.Value;
             }
@@ -90,16 +91,16 @@ namespace TechJobsOO
             {
                 result += "Data not available";
             }
-
+  
             result += "\nCore Competency: ";
-            if (JobCoreCompetency.Value != "")
+            if (JobCoreCompetency.Value !=null && JobCoreCompetency.Value !="")
             {
                 result += JobCoreCompetency.Value;
             }
             else
             {
                 result += "Data not available";
-            }*/
+            }
 
             result += "\n"; //blank line after job information
 
