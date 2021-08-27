@@ -56,6 +56,9 @@ namespace TechJobsTests
             test_job1.ToString();
             Assert.IsTrue(test_job1.ToString().StartsWith("\n"), "\n");
             Assert.IsTrue(test_job1.ToString().Contains("\nID: "));
+            //Assert.IsTrue(test_job1.ToString().Contains("Data not available"));
+            //Assert.IsTrue(test_job1.ToString().Contains("\nName: "));
+            //Assert.IsTrue(test_job1.ToString().Contains("Data not available"));
             Assert.IsTrue(test_job1.ToString().EndsWith("\n"), "\n");
         }
     }
