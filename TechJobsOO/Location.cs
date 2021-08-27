@@ -6,7 +6,7 @@ namespace TechJobsOO
         public int Id { get; }
         private static int nextId = 1;
         public string Value { get; set; }
-        //public string ZipCode { get; set; } //string in case we implement for Canada or other countries that are alphanumeric zipcodes
+        //public string ZipCode { get; set; } //FUTURE requirement? string in case we implement for Canada or other countries that are alphanumeric zipcodes
 
         //empty constructory
         public Location()
@@ -19,7 +19,7 @@ namespace TechJobsOO
         public Location(string value) : this()
         {
             Value = value; //aka city
-            //ZipCode = zipCode;
+            //ZipCode = zipCode; //FUTURE requirement?
         }
 
         public override bool Equals(object obj)

@@ -31,8 +31,15 @@
   <Class Name="TechJobsOO.CoreCompetency">
     <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEgBAAAAAAAAAAAKAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEgBAAAAAAAAAAAIAAAAAgAAAAAgA=</HashCode>
       <FileName>CoreCompetency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechJobsOO.JobField">
+    <Position X="3.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JobField.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

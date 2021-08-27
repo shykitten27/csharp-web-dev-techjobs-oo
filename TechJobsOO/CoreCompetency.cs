@@ -3,7 +3,7 @@ namespace TechJobsOO
 {
     public class CoreCompetency
     {
-        public int id { get; }
+        public int Id { get; }
         private static int nextId = 1;
         public string Value { get; set; }
 
@@ -12,7 +12,7 @@ namespace TechJobsOO
         //empty constructory
         public CoreCompetency()
         {
-            id = nextId;
+            Id = nextId;
             nextId++;
         }
         //overloaded second constructor
@@ -24,12 +24,12 @@ namespace TechJobsOO
         public override bool Equals(object obj)
         {
             return obj is CoreCompetency competency &&
-                   id == competency.id;
+                   Id == competency.Id;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(id, Value);
+            return HashCode.Combine(Id, Value);
         }
 
         public override string ToString()

@@ -8,9 +8,9 @@ namespace TechJobsOO
         public int Id { get; }
         private static int nextId = 1;
         public string Value { get; set; } //the employer value aka name
-        //public string Address { get; set; }
-        //public string PrimaryContact { get; set;}
-        //public List<Job> AvailableJobs { get; set;}
+        //public string Address { get; set; }           //FUTURE requirement?
+        //public string PrimaryContact { get; set;}     //FUTURE requirement?
+        //public List<Job> AvailableJobs { get; set;}   //FUTURE requirement?
 
         //empty constructory
         public Employer()

@@ -46,9 +46,68 @@ namespace TechJobsOO
 
         public override string ToString()
         {
+            string result = "";
+            result += "\n"; //blank line before job information
 
-            return "\nID: " + Id + "\nName: " + Name + "\nEmployer: " + EmployerName + "\nLocation: " + EmployerLocation +
-                "\nPosition Type: " + JobType + "\nCore Competency: " + JobCoreCompetency + "\n";
+            result += "\nID: ";
+            result += Id;
+
+            if (Name != "")
+            {
+                result += Name;
+            }
+            else
+            {
+                result += "Data not available";
+            }
+
+            /*            result += "\nID: " + Id;
+                        result += "\nName: ";
+                        
+
+                        result += "\nEmployer: ";
+                        if (EmployerName.Value != "")
+                        {
+                            result += EmployerName.Value;
+                        }
+                        else
+                        {
+                            result += "Data not available";
+                        }
+
+                        result += "\nLocation: ";
+                        if (EmployerLocation.Value != "")
+                        {
+                            result += EmployerLocation.Value;
+                        }
+                        else
+                        {
+                            result += "Data not available";
+                        }
+
+                        result += "\nPosition Type: ";
+                        if (JobType.Value != "")
+                        {
+                            result += JobType.Value;
+                        }
+                        else
+                        {
+                            result += "Data not available";
+                        }
+
+                        result += "\nCore Competency: ";
+                        if (JobCoreCompetency.Value != "")
+                        {
+                            result += JobCoreCompetency.Value;
+                        }
+                        else
+                        {
+                            result += "Data not available";
+                        }*/
+
+            result += "\n"; //blank line after job information
+
+            return result;
         }
     }
 }

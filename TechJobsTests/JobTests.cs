@@ -50,11 +50,13 @@ namespace TechJobsTests
             Assert.IsFalse(test_job3.Equals(test_job4));
         }
 
-/*        [TestMethod]
+        [TestMethod]
         public void TestJobToString()
         {
             test_job1.ToString();
-            Assert.AreEqual(test_job1.ToString(), "Data not available");
-        }*/
+            Assert.IsTrue(test_job1.ToString().StartsWith("\n"), "\n");
+            Assert.IsTrue(test_job1.ToString().Contains("\nID: "));
+            Assert.IsTrue(test_job1.ToString().EndsWith("\n"), "\n");
+        }
     }
 }
