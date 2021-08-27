@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TechJobsOO
 {
-    public class Employer
+    public class Employer : JobField
     {
         public int Id { get; }
         private static int nextId = 1;
