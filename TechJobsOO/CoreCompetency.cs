@@ -3,9 +3,9 @@ namespace TechJobsOO
 {
     public class CoreCompetency
     {
-        private int id { get; }
+        public int id { get; }
         private static int nextId = 1;
-        private string value { get; set; }
+        public string Value { get; set; }
 
         // TODO: Change the fields to auto-implemented properties. Complete
 
@@ -18,7 +18,7 @@ namespace TechJobsOO
         //overloaded second constructor
         public CoreCompetency(string v) : this()
         {
-            value = v; //aka skill
+            Value = v; //aka skill
         }
 
         public override bool Equals(object obj)
@@ -29,12 +29,12 @@ namespace TechJobsOO
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(id, value);
+            return HashCode.Combine(id, Value);
         }
 
         public override string ToString()
         {
-            return value;
+            return Value;
         }
     }
 }

@@ -18,7 +18,6 @@ namespace TechJobsOO
         // TODO: Add a second constructor to this class that uses the Location() constructor and sets the value of the value field as well as new zipCode field.
         public Location(string value) : this()
         {
-            Id = Location.nextId++;
             Value = value; //aka city
             //ZipCode = zipCode;
         }

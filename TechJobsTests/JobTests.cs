@@ -41,7 +41,7 @@ namespace TechJobsTests
             Assert.AreEqual(test_job3.EmployerName.Value, "ACME");
             Assert.AreEqual(test_job3.EmployerLocation.Value, "Desert");
             Assert.AreEqual(test_job3.JobType.Value, "Quality control");
-            Assert.AreEqual(test_job3.JobCoreCompetency, "Persistence");
+            Assert.AreEqual(test_job3.JobCoreCompetency.Value, "Persistence");
         }
 
         [TestMethod]

@@ -8,7 +8,7 @@ namespace TechJobsOO
     {
         /* all classes have an Id and Value 
            all classes have empty constructor and full constructor
-           the Equals and ToString are are common
+           the Equals and ToString() are common
         */
     }
 }
